@@ -65,7 +65,7 @@ message_submit.on('keypress', event => {
   }
 });
 
-channel.on("new_msg", payload => { message_container.append(`<br/>[${Date()}] ${payload.body}`)})
+channel.on("new_msg", payload => { message_container.append(`<br/>$ ${payload.body}`)})
 
 channel.join()
   .receive("ok", resp => { console.log("Joined successfully", resp) })
